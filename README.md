@@ -2,7 +2,7 @@
 
 
   ## Description
-  Using assignment 2 from the beginning of class, mostly using vanilla JS, css, and HTML; now we used our new skills with react to re develop our website application. 
+  Using Assignment 2 (https://github.com/ABELTRAN177/My-Portfolio-) from the beginning of class, mostly using vanilla JS, css, and HTML; now we use our new skills with react to re develop our website application. 
   
   ## Table of Contents
   1. [Description](#description)
