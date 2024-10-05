@@ -1,34 +1,37 @@
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import Error from './components/'
-import About from './components/About.jsx';
-import Home from './components/Home.jsx';
-import Contact from './components/Contact.jsx';
-import './styles.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import { contactMe } from '../src/components/pages/ContactMe.jsx';
+import { myBio } from '../src/components/pages/MyBio.jsx';
+import { myWork } from '../src/components/pages/MyWork.jsx';
+import { Resume } from '../src/components/pages/Resume.jsx';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <App />,
-        errorElement: <Error />,
         children: [
             {
                 index: true,
-                element: <About />,
+                element: <myBio />
             },
             {
-                path: '/home',
-                element: <Home />,
+                path: '/MyWork',
+                element: <myWork />
             },
             {
-                path: '/contact',
-                element: <Contact />,
+                path: '/ContactMe',
+                element: <ContactMe />
             },
-        ],
+            {
+                path: '/Resume',
+                // Rest of your code...
+            }
+        ]
     },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
 );
