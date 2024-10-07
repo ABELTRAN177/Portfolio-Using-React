@@ -1,8 +1,8 @@
 import { ProjectCard } from '../Interface/card';
-
 import { Grid } from "@mui/material";
 import { myWorkData }  from "../../assets/javascript/myWork";
 
+// Renders the MyWork page
 export const MyWork = () => {
     return (
         <Grid

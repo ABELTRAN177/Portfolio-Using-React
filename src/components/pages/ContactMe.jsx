@@ -3,7 +3,6 @@ import { Paper, Grid2 as Grid, TextField, Button, Typography, Backdrop, Snackbar
 import RiseLoader from "react-spinners/RiseLoader";
 import { Form, Field } from 'react-final-form';
 import  verifyEmail  from "../../utils/helpers"
-// import { snackbarMessage, setSnackbarMessage } from "@mui/material";
 
 export const ContactMe = () => {
     const requireEmail = (value) => {
@@ -18,7 +17,7 @@ export const ContactMe = () => {
     const required = (value) => {
         return value ? undefined : "Required";
     };
-
+    // State for loading spinner
     const [loading, setLoading] = useState(false);
     const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState("Message Sent!");
@@ -46,7 +45,6 @@ export const ContactMe = () => {
                     {...input}
                     variant="outlined"
                     label="Enter your email"
-                    // other props...
                   />
                 )}
               />
@@ -74,6 +72,7 @@ export const ContactMe = () => {
             </form>
           )}
         />
+        {/* message displays when button is clicked */}
         <Snackbar
           open={isSnackbarOpen}
           autoHideDuration={6000}

@@ -1,5 +1,6 @@
 import { Grid2 as Grid, Typography, Link } from "@mui/material";
 
+// Renders the Resume page
 export const Resume = () => {
   return (
     <Grid
@@ -26,7 +27,7 @@ export const Resume = () => {
           <Typography textAlign="center" variant="body1">
             Download my{" "}
             <Link
-              href="/public/Resume/Angels Resume.pdf" // Replace with the actual path to the file
+              href="/public/Resume/Angels Resume.pdf"
               download="Angel Resume.pdf"
               underline="hover"
             >

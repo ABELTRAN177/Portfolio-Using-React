@@ -4,12 +4,11 @@ import PropTypes from "prop-types";
 import LanguageIcon from '@mui/icons-material/Language';
 
 export const ProjectCard = ({ data }) => {
-    // Maps through the data props and displays cards of the different projects i
+    // Maps through the data props and displays cards of the different projects 
     return data.map((data) => {
       return (
         <Grid item xs={12} sm={6} md={3} key={data.id}>
         <Card sx={{ display: "flex", flexDirection: "column", Width: '200px', height: '200px', margin: '20px' }}>
-            {/* Card Content */}
             <CardContent>
               <Grid container justifyContent={"center"}>
                 <Typography gutterBottom variant="h5" component="div">
@@ -28,8 +27,6 @@ export const ProjectCard = ({ data }) => {
             {/* Card Actions will display two icons that will redirect
             user to the github repo and the deployed page*/}
             <CardActions sx={{ justifyContent: "center", marginTop: "auto" }}>
-              {/* GitHub Icon */}
-              {/* When clicked on redirects to github repo */}
               <IconButton
                 sx={{ color: "skyBlue" }}
                 onClick={() => window.open(data.github)}
@@ -37,7 +34,6 @@ export const ProjectCard = ({ data }) => {
                 <GitHubIcon style={{ width: 35, height: 35 }} />
               </IconButton>
   
-              {/* Deployed Page Icon */}
               <IconButton
                 sx={{ color: "#000" }}
                 onClick={() => window.open(data.deployed)}

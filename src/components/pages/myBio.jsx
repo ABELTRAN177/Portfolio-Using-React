@@ -10,7 +10,6 @@ export const MyBio = () => {
 
     // Disable scrolling when the component mounts
     document.body.style.overflow = 'hidden';
-    // document.body.style.height = '100vh';
 
     return () => {
       // Restore the original styles when the component unmounts
@@ -34,20 +33,20 @@ export const MyBio = () => {
           width: 500,
           height: 500,
           clipPath: 'polygon(50% 0%, 90% 20%, 90% 80%, 50% 100%, 10% 80%, 10% 20%)',
-          marginLeft: '50px', // Adjust this value to move the avatar more to the left
-          padding: '0 20px', // Add padding to the left and right of the avatar
+          marginLeft: '50px', // moves avatar to the left
+          padding: '0 20px', // adds padding around the avatar
         }}
       />
  <Box sx={{ height: '50vh', display: 'flex', alignItems: 'center' }}>
   <Divider
     orientation="vertical"
     flexItem
-    style={{ margin: '0 20px' }} // Add margin to create space around the line
+    style={{ margin: '0 20px' }} // Adds space around the line
   />
 </Box>
       <Box
         sx={{
-          width: '600px', // Increase this value to make the box wider
+          width: '600px', // makes box wider
           textAlign: 'center', // Center the text
           padding: '0 20px', // Add padding to the left and right of the typography
 

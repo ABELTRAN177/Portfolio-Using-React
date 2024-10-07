@@ -28,7 +28,7 @@ export const Footer = () => {
           setValue(newValue);
         }}
       >
-        {/* Using a GitHubSVG the log will redirect to GitHubpage */}
+        {/* Using a GitHubSVG,  user will be redirect to GitHub */}
         <BottomNavigationAction
   label="GitHub"
   icon={
@@ -46,6 +46,8 @@ export const Footer = () => {
   }}
   onClick={gitHubLink}
 />
+        {/* Using a linkedIn svg, user will be redirect to LinkedIn */}
+
         <BottomNavigationAction
           label="Linkedin"
           icon={

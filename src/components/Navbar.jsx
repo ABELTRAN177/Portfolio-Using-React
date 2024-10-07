@@ -9,6 +9,7 @@ export const Nav = () => {
     return sessionStorage.getItem("selectedTab") || "one";
   });
 
+  // Use the useNavigate hook from react-router-dom to navigate between routes
   const navigate = useNavigate();
 
   const routes = {
@@ -18,11 +19,13 @@ export const Nav = () => {
     four: "/resume",
   };
 
+// Handle the change of the selected tab
   const handleChange = (event, newValue) => {
     setValue(newValue);
     sessionStorage.setItem("selectedTab", newValue);
     navigate(routes[newValue]);
   };
+        {/* renders navbar */}
 
   return (
     <Grid
