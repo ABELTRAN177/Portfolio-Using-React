@@ -26,4 +26,4 @@ createRoot(document.getElementById("root")).render(
     {/* // The Footer component is always displayed because it's outside the Routes component */}
     <Footer />
   </Router>
-);v
+);
