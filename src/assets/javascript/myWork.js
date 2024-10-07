@@ -1,4 +1,4 @@
-import weather from '../cardimages/weather.png';
+import weather from '../cardimages/Weather.png';
 import blog from '../cardimages/VanillaBlog.png';
 import board from '../cardimages/TaskBoard.png';
 import tracker from '../cardimages/EmployeeTracker.png';
