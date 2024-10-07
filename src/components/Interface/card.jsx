@@ -1,5 +1,5 @@
 import { Grid2 as Grid, Card, CardContent, CardMedia, Typography, CardActions, IconButton } from "@mui/material";
-import { GitHubIcon } from "@mui/icons-material/GitHub";
+import  GitHubIcon  from "@mui/icons-material/GitHub";
 import PropTypes from "prop-types";
 
 export const ProjectCard = ({ data }) => {

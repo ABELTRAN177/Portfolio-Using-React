@@ -6,7 +6,7 @@ import RiseLoader from "react-spinners/RiseLoader";
 
 import { Form, Field } from "react-final-form";
 
-import { verifyEmail } from "../../utils/helpers"
+import  verifyEmail  from "../../utils/helpers"
 
 export const ContactMe = () => {
     const requireEmail = (value) => {

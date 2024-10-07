@@ -2,7 +2,7 @@ import { ProjectCard } from '../Interface/card';
 
 import { Grid2 as Grid, } from "@mui/material";
 
-import { myWorkData } from "../../assets/javascript/myWork";
+import { myWorkData }  from "../../assets/javascript/myWork";
 
 export const MyWork = () => {
     return (
@@ -19,7 +19,7 @@ export const MyWork = () => {
           paddingRight: "20px",
         }}
       >
-        <ProjectCard data={projectData}></ProjectCard>
+        <ProjectCard data={myWorkData}></ProjectCard>
       </Grid>
     );
   };
