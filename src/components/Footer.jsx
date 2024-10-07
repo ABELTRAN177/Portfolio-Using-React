@@ -33,7 +33,7 @@ export const Footer = () => {
           label="GitHub"
           icon={
             <img
-              src={githubIcon}
+              src={gitHubLink}
               alt="GitHub Icon"
               style={{ width: 35, height: 35 }}
             />
@@ -51,7 +51,7 @@ export const Footer = () => {
           label="Linkedin"
           icon={
             <img
-              src={linkedinIcon}
+              src={linkedInLink}
               style={{ width: 35, height: 35, color: "black" }}
             />
           }
