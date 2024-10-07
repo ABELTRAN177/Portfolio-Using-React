@@ -7,28 +7,8 @@ export const ProjectCard = ({ data }) => {
     // Maps through the data props and displays cards of the different projects i
     return data.map((data) => {
       return (
-        <Grid className="card" size={{ xs: 12, md: 6, s: 4 }} key={data.id}>
-          <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-            <CardMedia sx={{ height: 400 }}>
-              {/* The card will either display a photo or a video which is why there
-              is a ternary operator */}
-              {data.video ? (
-                <iframe
-                  src={data.video}
-                  width="100%"
-                  height="100%"
-                  allow="autoplay"
-                ></iframe>
-              ) : (
-                // Displays image if there is no video
-                <img
-                  style={{ height: "100%", width: "100%", objectFit: "cover" }}
-                  src={data.pic}
-                  alt={data.name}
-                />
-              )}
-            </CardMedia>
-  
+        <Grid item xs={12} sm={6} md={3} key={data.id}>
+        <Card sx={{ display: "flex", flexDirection: "column", Width: '200px', height: '200px', margin: '20px' }}>
             {/* Card Content */}
             <CardContent>
               <Grid container justifyContent={"center"}>
