@@ -1,6 +1,7 @@
 import { Grid2 as Grid, Card, CardContent, CardMedia, Typography, CardActions, IconButton } from "@mui/material";
 import  GitHubIcon  from "@mui/icons-material/GitHub";
 import PropTypes from "prop-types";
+import LanguageIcon from '@mui/icons-material/Language';
 
 export const ProjectCard = ({ data }) => {
     // Maps through the data props and displays cards of the different projects i

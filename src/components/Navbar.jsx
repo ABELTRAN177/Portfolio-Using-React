@@ -13,9 +13,9 @@ export const Nav = () => {
 
   const routes = {
     one: "/",
-    two: "/MyWork",
-    three: "/contactMe",
-    four: "/Resume",
+    two: "/mywork",
+    three: "/contactme",
+    four: "/resume",
   };
 
   const handleChange = (event, newValue) => {
@@ -26,15 +26,15 @@ export const Nav = () => {
 
   return (
     <Grid
-      className="nav"
-      container
-      style={{
-        width: "100%",
-        padding: "20px",
-        background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
-        color: "#333",
-      }}
-    >
+    className="nav"
+    container
+    style={{
+      width: "100%",
+      padding: "20px",
+      background: "#008000", // Dark green color
+      color: "#FFF",
+    }}
+  >
       <Grid container size={12} alignItems={"center"} marginRight={"15px"}>
         <Grid size={{ xs: 6, md: 8, sm: 7 }}>
           <h2
@@ -47,8 +47,6 @@ export const Nav = () => {
           </h2>
         </Grid>
         <Grid size={{ md: 4, xs: 6, sm: 5 }}>
-          {/* Tabs is a Material UI component that will help with the 
-          routing of the different endpoints */}
           <Tabs
             value={value}
             onChange={handleChange}
@@ -56,26 +54,29 @@ export const Nav = () => {
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
           >
-            {/* My Bio will display on the home page */}
             <Tab
               value="one"
               label="My Bio"
+              style={{ color: "#FFF" }} 
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} 
             />
             <Tab
               value="two"
               label="My Work"
+              style={{ color: "#FFF" }} 
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }}
             />
             <Tab
               value="three"
               label="Contact Me"
+              style={{ color: "#FFF" }} 
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} 
             />
 
             <Tab
               value="four"
               label="Resume"
+              style={{ color: "#FFF" }} 
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} 
             />
           </Tabs>

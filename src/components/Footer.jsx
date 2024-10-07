@@ -30,28 +30,28 @@ export const Footer = () => {
       >
         {/* Using a GitHubSVG the log will redirect to GitHubpage */}
         <BottomNavigationAction
-          label="GitHub"
-          icon={
-            <img
-              src={gitHubLink}
-              alt="GitHub Icon"
-              style={{ width: 35, height: 35 }}
-            />
-          }
-          // When the cursor hovers over icons will display background change
-          sx={{
-            "&:hover": {
-              color: "primary.main", 
-              backgroundColor: "rgba(0,0,0,0.1)", 
-            },
-          }}
-          onClick={handleGitHubClick}
-        />
+  label="GitHub"
+  icon={
+    <img
+      src={githubSVG}
+      alt="GitHub Icon"
+      style={{ width: 35, height: 35 }}
+    />
+  }
+  sx={{
+    "&:hover": {
+      color: "primary.main", 
+      backgroundColor: "rgba(0,0,0,0.1)", 
+    },
+  }}
+  onClick={gitHubLink}
+/>
         <BottomNavigationAction
           label="Linkedin"
           icon={
             <img
-              src={linkedInLink}
+              src={linkedinSVG}
+              alt="LinkedIn Icon"
               style={{ width: 35, height: 35, color: "black" }}
             />
           }
@@ -61,7 +61,7 @@ export const Footer = () => {
               backgroundColor: "rgba(0,0,0,0.1)", 
             },
           }}
-          onClick={handleLinkedinClick}
+          onClick={linkedInLink}
         />
       </BottomNavigation>
     </Box>

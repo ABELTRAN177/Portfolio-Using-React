@@ -1,7 +1,6 @@
 import { ProjectCard } from '../Interface/card';
 
-import { Grid2 as Grid, } from "@mui/material";
-
+import { Grid } from "@mui/material";
 import { myWorkData }  from "../../assets/javascript/myWork";
 
 export const MyWork = () => {

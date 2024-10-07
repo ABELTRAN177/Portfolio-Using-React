@@ -1,12 +1,9 @@
 import { useState } from 'react';
-
 import { Paper, Grid2 as Grid, TextField, Button, Typography, Backdrop, Snackbar } from "@mui/material";
-
 import RiseLoader from "react-spinners/RiseLoader";
-
-import { Form, Field } from "react-final-form";
-
+import { Form, Field } from 'react-final-form';
 import  verifyEmail  from "../../utils/helpers"
+// import { snackbarMessage, setSnackbarMessage } from "@mui/material";
 
 export const ContactMe = () => {
     const requireEmail = (value) => {
@@ -23,66 +20,66 @@ export const ContactMe = () => {
     };
 
     const [loading, setLoading] = useState(false);
-
     const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState("Message Sent!");
 
     return (
-        <Grid size={8}>
-            <Typography sx={{ marginBottom: "20px" }}>
-              Name:
-            </Typography>
-            <Field
-              name="nameInput"
-              validate={required}
-              render={({ input, meta }) => (
-                <TextField
-                  {...input}
-                  variant="outlined"
-                  label="Enter your name"
-                  placeholder="Name"
-                  fullWidth
-                  error={meta.touched && !input.value ? true : false}
-                />
-              )}
-            />
-    
-            <Typography sx={{ marginBottom: "20px" }}>
-              Email:
-            </Typography>
-            <Field
-              name="emailInput"
-              validate={required}
-              render={({ input, meta }) => (
-                <TextField
-                  {...input}
-                  variant="outlined"
-                  label="Enter your email"
-                  placeholder="Email"
-                  fullWidth
-                  error={meta.touched && !input.value ? true : false}
-                />
-              )}
-            />
-    
-            <Typography sx={{ marginBottom: "20px" }}>
-              Message:
-            </Typography>
-            <Field
-              name="messageInput"
-              validate={required}
-              render={({ input, meta }) => (
-                <TextField
-                  {...input}
-                  variant="outlined"
-                  label="Write your message"
-                  placeholder="Message"
-                  fullWidth
-                  multiline
-                  error={meta.touched && !input.value ? true : false}
-                />
-              )}
-            />
-        </Grid>
+      <>
+        <Form
+          onSubmit={(values, form) => {
+            // handle form submission here
+            console.log(values);
+            setIsSnackbarOpen(true);
+            setSnackbarMessage("Message Sent!");
+            form.reset();
+          }}
+          render={({ handleSubmit, pristine, submitting }) => (
+            <form onSubmit={handleSubmit}>
+              <Typography sx={{ marginBottom: "20px" }}>
+                Email:
+              </Typography>
+              <Field
+                name="emailInput"
+                validate={required}
+                render={({ input, meta }) => (
+                  <TextField
+                    {...input}
+                    variant="outlined"
+                    label="Enter your email"
+                    // other props...
+                  />
+                )}
+              />
+              <Typography sx={{ marginBottom: "20px" }}>
+                Message:
+              </Typography>
+              <Field
+                name="messageInput"
+                validate={required}
+                render={({ input, meta }) => (
+                  <TextField
+                    {...input}
+                    variant="outlined"
+                    label="Write your message"
+                    placeholder="Message"
+                    fullWidth
+                    multiline
+                    error={meta.touched && !input.value ? true : false}
+                  />
+                )}
+              />
+              <Button type="submit" disabled={pristine || submitting}>
+                Submit
+              </Button>
+            </form>
+          )}
+        />
+        <Snackbar
+          open={isSnackbarOpen}
+          autoHideDuration={6000}
+          onClose={() => setIsSnackbarOpen(false)}
+          message={snackbarMessage}
+        />
+      </>
     );
-};
+}
