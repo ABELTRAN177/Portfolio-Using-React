@@ -25,8 +25,8 @@
   ## Testing
     run "npm run dev" in the terminal/integrated terminal 
 
-  ## Netlify
-   https://angelswebpage.netlify.app/
+  ## Render
+  (https://portfolio-using-react-uxnz.onrender.co)
   ## Reach Out
     If you have any questions, please feel free to reach out to me on GitHub at [@abeltran177](https://github.com/abeltran177) or via email at angel.beltran17@gmail.com.
   
